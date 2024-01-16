@@ -1,9 +1,9 @@
-import { defineField, defineType } from "sanity";
+import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'therapy',
-  title: 'Therapy',
-  description: "Направление терапии, например 'Аналитическая'",
+  name: 'qa',
+  title: 'QA',
+  description: 'Пара вопрос-ответ',
   type: 'document',
   fields: [
     defineField({
@@ -24,27 +24,16 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
-    }),
-    defineField({
-      name: 'coverImage',
-      title: 'Cover Image',
-      type: 'imageWithAlt',
     }),
     defineField({
       name: 'order',
       title: 'Order',
       type: 'number',
       options: {
-        list: [1, 2, 3],
+        list: [1, 2, 3, 4, 5, 6],
         layout: 'dropdown',
       },
       validation: (Rule) => Rule.required(),
@@ -54,7 +43,6 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      media: 'coverImage',
     },
   },
 })

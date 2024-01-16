@@ -6,6 +6,7 @@ import page from "./schemas/page";
 import post from "./schemas/post";
 import psyHelp from "./schemas/psyHelp";
 import therapy from "./schemas/therapy";
-export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, tag, blockContent, imageWithAlt, psyHelp, therapy, page],
-};
+import qa from './schemas/qa'
+export const schema: {types: SchemaTypeDefinition[]} = {
+  types: [post, tag, blockContent, imageWithAlt, psyHelp, therapy, page, qa],
+}
